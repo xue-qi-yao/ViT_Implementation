@@ -15,11 +15,11 @@
 ## 2. Explaination
 
 * ### Patch embedding
-![patch_embedding](patch_embedding.png)
+![patch_embedding](md_pictures/patch_embedding.png)
 
 * ### Class and positional embedding
-![class&positional_embedding](class&positional_embedding.png)
+![class&positional_embedding](md_pictures/class&positional_embedding.png)
 
 * ### ViT encoder 
-![encoder_1](encoder_1.png)
-![encoder_2](encoder_2.png)
+![encoder_1](md_pictures/encoder_1.png)
+![encoder_2](md_pictures/encoder_2.png)
