@@ -120,16 +120,10 @@ if __name__ == '__main__':
     parser.add_argument('--batch-size', type=int, default=8)
     parser.add_argument('--lr', type=float, default=0.001)
     parser.add_argument('--lrf', type=float, default=0.01)
-
-    # 数据集所在根目录
     # https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
     parser.add_argument('--data-path', type=str, default="./flower_photos")
     parser.add_argument('--model-name', default='', help='create model name')
-
-    # 预训练权重路径，如果不想载入就设置为空字符
     parser.add_argument('--weights', type=str, default='./vit_base_patch16_224_in21k.pth', help='initial weights path')
-
-    # 是否冻结权重
     parser.add_argument('--freeze-layers', type=bool, default=True)
     parser.add_argument('--device', default='cuda:0', help='device id (i.e. 0 or 0,1 or cpu)')
 
