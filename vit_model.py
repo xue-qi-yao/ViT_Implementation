@@ -69,7 +69,7 @@ class PatchEmbed(nn.Module):
 
 class Attention(nn.Module):
     def __init__(self,
-                 dim,   # 输入token的dim
+                 dim,  
                  num_heads=8,
                  qkv_bias=False,
                  qk_scale=None,

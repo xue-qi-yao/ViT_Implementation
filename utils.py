@@ -83,8 +83,8 @@ def plot_data_loader_image(data_loader):
             label = labels[i].item()
             plt.subplot(1, plot_num, i+1)
             plt.xlabel(class_indices[str(label)])
-            plt.xticks([])  # 去掉x轴的刻度
-            plt.yticks([])  # 去掉y轴的刻度
+            plt.xticks([]) 
+            plt.yticks([]) 
             plt.imshow(img.astype('uint8'))
         plt.show()
 
@@ -103,9 +103,8 @@ def read_pickle(file_name: str) -> list:
 def train_one_epoch(model, optimizer, data_loader, device, epoch):
     model.train()
     loss_function = torch.nn.CrossEntropyLoss()
-    accu_loss = torch.zeros(1).to(device)  # 累计损失
-    accu_num = torch.zeros(1).to(device)   # 累计预测正确的样本数
-    optimizer.zero_grad()
+    accu_loss = torch.zeros(1).to(device)  
+    accu_num = torch.zeros(1).to(device)   
 
     sample_num = 0
     data_loader = tqdm(data_loader, file=sys.stdout)
@@ -141,8 +140,8 @@ def evaluate(model, data_loader, device, epoch):
 
     model.eval()
 
-    accu_num = torch.zeros(1).to(device)   # 累计预测正确的样本数
-    accu_loss = torch.zeros(1).to(device)  # 累计损失
+    accu_num = torch.zeros(1).to(device)   
+    accu_loss = torch.zeros(1).to(device)  
 
     sample_num = 0
     data_loader = tqdm(data_loader, file=sys.stdout)
